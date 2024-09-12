@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 
 // Constants
 const app = express();
-const port = 3000;
+const port = 3001;
 
 // Variables
 var blogPostArray = [];

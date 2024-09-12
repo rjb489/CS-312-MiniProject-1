@@ -3,31 +3,50 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <link href="/style.css" rel="stylesheet">
+   <title>Edit</title>
 </head>
 
 <body>
    
- <h2> Editing Post </h2>
- <p> Please enter information in every field </p>
+ <h2>
+   Editing Post
+ </h2>
+ <p>
+   Please enter information in every field
+ </p>
  <form action="/edit/<%=postID%>" method="post" class="edit-form">
-   <label for="title">Title:</label>
+   <label for="title">
+      Title:
+   </label>
    <br>
-   <textarea id="title" name="title" rows="1" cols="50" required><%= post.title %></textarea>
+   <textarea id="title" name="title" rows="1" cols="50" required>
+      <%= blogPost.title %>
+   </textarea>
    <br><br>
 
-   <label for="author">Author:</label>
+   <label for="author">
+      Author:
+   </label>
    <br>
-   <textarea id="author" name="author" rows="1" cols="50" required><%= post.author %></textarea>
+   <textarea id="author" name="author" rows="1" cols="50" required>
+      <%= blogPost.author %>
+   </textarea>
    <br><br>
 
-   <label for="content">Body:</label>
+   <label for="content">
+      Body:
+   </label>
    <br>
-   <textarea id="content" name="content" rows="10" cols="50" required><%= post.content %></textarea>
+   <textarea id="content" name="content" rows="10" cols="50" required>
+      <%= blogPost.content %>
+   </textarea>
    <br><br>
 
    <div class="centered">
-      <button type="submit">Post</button>
+      <button type="submit">
+         Post
+      </button>
    </div>
  </form>
 </body>
