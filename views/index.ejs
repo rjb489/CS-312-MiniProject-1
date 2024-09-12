@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   
+   <H1>Awesome Blogging Site!</H1>
+   <p> You can post about anything, edit anything, and delete anything (super safe!)</p>
+
+   <ul>
+      <% blogPostArray.forEach( function( post, index ) { %>
+      <h2><b></b><%= post.title %></h2>
+      <p><b>Author:</b><%= post.author %></p>
+      <p><b>Body:</b> <%= post.content %></p>
+      <p>Posted at:<%= post.time %></p>
+
+      <a href="/edit/<%= index %>"><button type="button" 
+         class="edit-button">Edit Post
+      </button></a>
+      
+      <form action="/delete/<%= index %>" method="post" class="delete-form">
+         <button type="submit" class="delete-button">Delete Post
+         </button></form>
+      <% }) %>
+   </ul>
+
+ <h2> Create a New Post </h2>
+ <p> Please enter information in every field </p>
+ <form action="/new-post" method="post">
+   <label for="title">Title:</label>
+   <br>
+   <textarea id="title" name="title" rows="1" cols="50" required></textarea>
+   <br><br>
+
+   <label for="author">Author:</label>
+   <br>
+   <textarea id="author" name="author" rows="1" cols="50" required></textarea>
+   <br><br>
+
+   <label for="content">Body:</label>
+   <br>
+   <textarea id="content" name="content" rows="10" cols="50" required></textarea>
+   <br><br>
+
+   <div class="centered">
+      <button type="submit">Post</button>
+   </div>
+ </form>
+</body>
+</html>
